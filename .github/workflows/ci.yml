@@ -33,6 +33,8 @@ jobs:
           
       - name: setup gradle
         uses: gradle/actions/setup-gradle@v4
+        with: 
+          gradle-version: '8.8'
                       
       - name: Build with gradle
         run: gradle build
