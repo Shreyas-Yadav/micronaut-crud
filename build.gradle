@@ -32,6 +32,9 @@ dependencies {
 
     // yaml instead of properties
     runtimeOnly("org.yaml:snakeyaml")
+
+    //
+    testImplementation("io.micronaut:micronaut-http-client")
 }
 
 

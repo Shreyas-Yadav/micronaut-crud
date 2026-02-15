@@ -22,3 +22,12 @@ services:
     depends_on:
       mysql:
         condition: service_healthy            
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    environment:
+      DATASOURCES_DEFAULT_URL: "jdbc:mysql://mysql:3306/mn_playground"
+    depends_on:
+      mysql:
+        condition: service_healthy
